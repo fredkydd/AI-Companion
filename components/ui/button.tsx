@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
         illusion:
           'bg-gradient-to-r from-violet-500 via-yellow-500 to-red-500 text-white border-0',
+        toggle: 'bg=gradient-r from-white-500 to-black-500 border-radius-0',
       },
       size: {
         default: 'h-10 px-4 py-2',
