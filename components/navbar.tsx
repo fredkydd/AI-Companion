@@ -2,10 +2,11 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { UserButton } from '@clerk/nextjs';
-import { Menu, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { Poppins } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import { ModeToggle } from './mode-toggle';
+import MobileSidebar from './mobile-sidebar';
 
 const font = Poppins({
   weight: '600',
@@ -14,9 +15,10 @@ const font = Poppins({
 
 export default function Navbar() {
   return (
-    <nav className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
+    <nav className="fixed w-full h-16 z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
       <section className="flex items-center">
-        <Menu className="block md:hidden" />
+        {/* <Menu className="block md:hidden" /> */}
+        <MobileSidebar />
         <Link href="/">
           <h1
             className={
@@ -31,13 +33,14 @@ export default function Navbar() {
         </Link>
       </section>
       <section className="flex items-center gap-x-3">
-        <Button variant="illusion" size="sm">
+        <Button variant="illusion" size="sm" className="rounded-md">
           {'  '}
-          Upgrade <Sparkles className="h-4 w-4 fill-white text-white ml-2" />
+          Upgrade{' '}
+          <Sparkles className="h-4 w-4 fill-white text-yellow-500 ml-2" />
           {'  '}
         </Button>
-        <UserButton afterSignOutUrl="/" />
         <ModeToggle />
+        <UserButton afterSignOutUrl="/" />
       </section>
     </nav>
   );

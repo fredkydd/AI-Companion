@@ -19,8 +19,9 @@ const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
         illusion:
-          'bg-gradient-to-r from-violet-500 via-yellow-500 to-red-500 text-white border-0',
-        toggle: 'bg=gradient-r from-white-500 to-black-500 border-radius-0',
+          'bg-gradient-to-r from-violet-500 via-yellow-500 to-red-500 text-white focus:outline-none focus:ring focus:ring-violet-300  hover:from-red-500 hover:via-yellow-500 hover:to-violet-500 hover:text-black',
+        toggle:
+          'bg-gradient-to-r from-white via-grey-500 to-black rounded-full',
       },
       size: {
         default: 'h-10 px-4 py-2',
