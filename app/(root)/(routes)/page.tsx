@@ -1,11 +1,9 @@
-export default function RootPage() {
-  const text = '{children}';
+import SearchInput from '@/components/search-input';
 
+export default function RootPage() {
   return (
-    <main className="text-green-500 text-3xl m-3 h-full flex justify-center">
-      <h1>
-        <strong> {text}</strong>
-      </h1>
-    </main>
+    <section className="h-full p-4 space-y-2">
+      <SearchInput />
+    </section>
   );
 }
